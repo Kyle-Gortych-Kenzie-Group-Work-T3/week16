@@ -36,7 +36,10 @@ blank
 ### Gradle Commands 
 
 ```console
-./
+./gradlew groupactivity-icecream-test-phase0
+./gradlew groupactivity-icecream-test-phase1
+./gradlew groupactivity-icecream-test-phase2
+./gradlew groupactivity-icecream-test-phase3
 ```
 <br>
 
