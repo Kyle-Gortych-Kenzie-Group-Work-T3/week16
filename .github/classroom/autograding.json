@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 0",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase0 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 1",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase1 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 2",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase2 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test GroupActivity IceCream Integration Phase 3",
+      "setup": "",
+      "run": "./gradlew groupactivity-icecream-test-phase3 --rerun-tasks",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
