@@ -53,7 +53,7 @@ public class IceCreamParlorService {
         List<Carton> cartons = cartonDao.getCartonsByFlavorNames(flavorNames);
 
         // PHASE 1: Use removeIf() to remove any empty cartons from cartons
-
+        cartons.removeIf(Carton::isEmpty);
         return buildSundae(cartons);
     }
 
@@ -63,7 +63,8 @@ public class IceCreamParlorService {
 
         // PHASE 2: Use forEach() to add one scoop of each flavor
         // remaining in cartons
-
+        
+        cartons.forEach(carton -> sundae.addScoop(carton.getFlavor()));
         return sundae;
     }
 
@@ -94,7 +95,15 @@ public class IceCreamParlorService {
         );
 
         // PHASE 3: Replace right-hand side: use map() to convert List<Recipe> to List<Queue<Ingredient>>
-        List<Queue<Ingredient>> ingredientQueues = new ArrayList<>();
+        //List<Queue<Ingredient>> ingredientQueues = new ArrayList<>();
+        
+        List<Queue<Ingredient>> ingredientQueues = recipes.stream()
+                .map(recipe -> RecipeConverter.fromRecipeToIngredientQueue(recipe))
+                .collect(Collectors.toList());
+
+        ingredientQueues = recipes.stream()
+                .map(RecipeConverter::fromRecipeToIngredientQueue)
+                .collect(Collectors.toList());
 
         return makeIceCreamCartons(ingredientQueues);
     }
